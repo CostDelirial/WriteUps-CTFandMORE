@@ -12,20 +12,19 @@ Broken Object Level Authorization (BOLA) ocurre cuando una API no valida correct
 
 Esto permite que un atacante modifique identificadores como:
 
-id = VIN vheiculo
+    id = VIN vheiculo
+
 y acceda a información de otros usuarios.
 
 Esta vulnerabilidad está clasificada como:
-
-OWASP API1:2023 – Broken Object Level Authorization
-
-y es considerada crítica debido a que puede derivar en exposición masiva de información o toma de cuentas.
+OWASP API1:2023 – Broken Object Level Authorization y es considerada crítica debido a que puede derivar en exposición masiva de información o toma de cuentas.
 
 **Herramientas utilizadas****
 
-Burp Suite
-Caido
-Firefox + FoxyProxy
+    Burp Suite
+    Caido
+    Firefox + FoxyProxy
+
 Estas herramientas permitieron interceptar, analizar y modificar las peticiones HTTP enviadas a la API de crAPI.
 
 **Enumeración de endpoints****
@@ -37,30 +36,28 @@ Interceptar todas las peticiones generadas por la aplicación.
 Identificar endpoints relevantes que interactúan con la API.
 Durante el análisis se identificaron los siguientes endpoints:
 
-/identity/api/v2/user/dashboard
-/identity/api/v2/vehicle/vehicles
-/workshop/api/shop/products?limit=30&offset=0
-/community/api/v2/community/posts/recent?limit=30&offset=0
-/community/api/v2/community/posts/DvpHFhEfaiMbtwC2xepPnj
-/identity/api/v2/user/dashboard
-/identity/api/v2/vehicle/vehicles
-/identity/api/v2/user/videos/0
-/workshop/api/merchant/contact_mechanic
-/identity/api/auth/login
-/identity/api/auth/verify
+    /identity/api/v2/user/dashboard
+    /identity/api/v2/vehicle/vehicles
+    /workshop/api/shop/products?limit=30&offset=0
+    /community/api/v2/community/posts/recent?limit=30&offset=0
+    /community/api/v2/community/posts/DvpHFhEfaiMbtwC2xepPnj
+    /identity/api/v2/user/dashboard
+    /identity/api/v2/vehicle/vehicles
+    /identity/api/v2/user/videos/0
+    /workshop/api/merchant/contact_mechanic
+    /identity/api/auth/login
+    /identity/api/auth/verify
+
 ![1770785335991](images/BOLA/1770785335991.png)
 
 **Exposición de información sensible**
 
 Durante la revisión de respuestas del servidor se observó que la API expone:
 
-Correos electrónicos de usuarios
-
-Identificadores UUID
-
-VIN de vehículos
-
-IDs internos
+    Correos electrónicos de usuarios
+    Identificadores UUID
+    VIN de vehículos
+    IDs internos
 
 Esta información puede ser utilizada para realizar pruebas de enumeración y acceso no autorizado.
 Prueba de Concepto (PoC)
@@ -83,17 +80,12 @@ Esto demuestra que la API no valida correctamente la autorización a nivel de ob
 
 Impacto
 
-La explotación de esta vulnerabilidad permite:
-
-Acceso a datos de otros usuarios
-
-Exposición de información sensible
-
-Enumeración de recursos internos
-
-Posible escalación a toma de cuentas
-
-Violación de privacidad
+    La explotación de esta vulnerabilidad permite:
+    Acceso a datos de otros usuarios
+    Exposición de información sensible
+    Enumeración de recursos internos
+    Posible escalación a toma de cuentas
+    Violación de privacidad
 
 El impacto se considera crítico debido a la posibilidad de acceder a información de múltiples usuarios autenticados.
 
