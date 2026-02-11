@@ -1,0 +1,111 @@
+/identity/api/v2/user/dashboard
+/identity/api/v2/vehicle/vehicles
+/workshop/api/shop/products?limit=30&offset=0
+/community/api/v2/community/posts/recent?limit=30&offset=0
+/community/api/v2/community/posts/DvpHFhEfaiMbtwC2xepPnj
+/identity/api/v2/user/dashboard
+/identity/api/v2/vehicle/vehicles
+/identity/api/v2/user/videos/0
+/workshop/api/merchant/contact_mechanic
+
+/identity/api/auth/login
+/identity/api/auth/verify
+
+
+////////////////////////////EXPOSITION DATA
+ENDPOINT community/api/v2/community/posts/recent?limit=30&offset=0
+
+
+    "posts": [{
+
+        "id": "DvpHFhEfaiMbtwC2xepPnj",
+
+        "title": "Title 3",
+
+        "content": "Hello world 3",
+
+        "author": {
+
+            "nickname": "Robot",
+
+            "email": "robot001@example.com",
+
+            "vehicleid": "4bae9968-ec7f-4de3-a3a0-ba1b2ab5e5e5",
+
+            "profile_pic_url": "",
+
+            "created_at": "2026-02-07T16:19:41.011Z"
+
+        },
+
+        "comments": [],
+
+        "authorid": 3,
+
+        "CreatedAt": "2026-02-07T16:19:41.011Z"
+
+    }, {
+
+        "id": "fVdvE584CtDtiMz5QYWa2b",
+
+        "title": "Title 2",
+
+        "content": "Hello world 2",
+
+        "author": {
+
+            "nickname": "Pogba",
+
+            "email": "pogba006@example.com",
+
+            "vehicleid": "cd515c12-0fc1-48ae-8b61-9230b70a845b",
+
+            "profile_pic_url": "",
+
+            "created_at": "2026-02-07T16:19:41.009Z"
+
+        },
+
+        "comments": [],
+
+        "authorid": 2,
+
+        "CreatedAt": "2026-02-07T16:19:41.009Z"
+
+    }, {
+
+        "id": "qfkcKxGaWKAjYuXdKMkEb6",
+
+        "title": "Title 1",
+
+        "content": "Hello world 1",
+
+        "author": {
+
+            "nickname": "Adam",
+
+            "email": "adam007@example.com",
+
+            "vehicleid": "f89b5f21-7829-45cb-a650-299a61090378",
+
+            "profile_pic_url": "",
+
+            "created_at": "2026-02-07T16:19:41.003Z"
+
+        },
+
+        "comments": [],
+
+        "authorid": 1,
+
+        "CreatedAt": "2026-02-07T16:19:41.003Z"
+
+    }],
+
+    "next_offset": null,
+
+    "previous_offset": null,
+
+    "total": 3
+
+}
