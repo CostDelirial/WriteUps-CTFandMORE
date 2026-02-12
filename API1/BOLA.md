@@ -24,6 +24,7 @@ OWASP API1:2023 – Broken Object Level Authorization y es considerada crítica 
     Burp Suite
     Caido
     Firefox + FoxyProxy
+    Postman
 
 Estas herramientas permitieron interceptar, analizar y modificar las peticiones HTTP enviadas a la API de crAPI.
 
